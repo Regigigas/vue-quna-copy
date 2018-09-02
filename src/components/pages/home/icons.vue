@@ -1,5 +1,5 @@
 <template>
-  <swiper class="icons home-icons" :options="swiperOption" ref="mySwiper">
+  <swiper class="icons" :options="swiperOption" ref="mySwiper">
     <swiper-slide class="icons-page"
                   v-for="page of pages"
                   :key="page.id">
@@ -50,32 +50,26 @@ export default {
 
 <style scoped lang="stylus">
 @import '../../../assets/styles/commonScoped/varibles.styl'
+.icons >>> .swiper-pagination-bullet
+  background: #bgColor
 .icons
+  overflow hidden
+  height: 0
   width 100%
-  padding-bottom: .6rem
-  .icons-page
-    overflow hidden
-    height: 0
-    padding-bottom: 2.8rem
-    .icons-list
-      display flex
-      flex-wrap wrap
-      .icons-item
-        width 25%
-        padding-top .3rem
-        text-align center
-        .icons-img
-          width: .66rem
-          height .66rem
-          margin: 0 auto
-        .icons-title
-          margin-top .16rem
-          color: #333
-          font-size: .28rem
-</style>
-
-<style lang="stylus">
-.home-banner
-  .swiper-pagination-bullet
-    background: #fff
+  padding-bottom: 3.4rem
+  .icons-list
+    display flex
+    flex-wrap wrap
+    .icons-item
+      width 25%
+      padding-top .3rem
+      text-align center
+      .icons-img
+        width: .66rem
+        height .66rem
+        margin: 0 auto
+      .icons-title
+        margin-top .16rem
+        color: #333
+        font-size: .28rem
 </style>
