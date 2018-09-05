@@ -31,8 +31,22 @@ export default {
       })
     }
   },
+  methods: {
+    createScroller () {
+      this.scroller = new BScroll(this.$refs.scroller, {
+        probeType: 2
+      })
+    },
+    bindEvents () {
+      this.scroller.on('scroll', this.handleScroll.bind(this))
+    },
+    handleScroll (e) {
+      console.log(e)
+    }
+  },
   mounted () {
-    this.scroller = new BScroll(this.$refs.scroller)
+    this.createScroller()
+    this.bindEvents()
   }
 }
 </script>

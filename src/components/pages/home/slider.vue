@@ -1,7 +1,7 @@
 <template>
   <swiper class="banner home-banner" :options="swiperOption" ref="mySwiper">
     <swiper-slide v-for="item of sliders" :key="item.id">
-      <img class="banner-img" :src="item.imgUrl" />>
+      <img class="banner-img" :src="item.imgUrl" />
     </swiper-slide>
     <div class="swiper-pagination"  slot="pagination"></div>
   </swiper>
@@ -29,7 +29,7 @@ export default {
   width: 100%
   overflow hidden
   height 0
-  padding-bottom: 31.25%
+  padding-bottom: 29.25%
   background: #fff
   .banner-img
     width: 100%
